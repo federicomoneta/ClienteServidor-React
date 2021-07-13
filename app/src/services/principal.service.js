@@ -1,33 +1,22 @@
+//Desde aca se exporta el servicio y las funciones se corresponden a metodos axios permiten hacer http requests con operaciones crud
 import http from "../http-common";
 
-class TutorialDataService {
+class PrincipalDataService {
   getAll() {
-    return http.get("/tutorials");
+    return http.get("/principal");
   }
 
   get(id) {
-    return http.get(`/tutorials/${id}`);
+    return http.get(`/principal/${id}`);
   }
 
   create(data) {
-    return http.post("/tutorials", data);
+    return http.post("/principal", data);
   }
 
   update(id, data) {
-    return http.put(`/tutorials/${id}`, data);
-  }
-
-  delete(id) {
-    return http.delete(`/tutorials/${id}`);
-  }
-
-  deleteAll() {
-    return http.delete(`/tutorials`);
-  }
-
-  findByTitle(title) {
-    return http.get(`/tutorials?title=${title}`);
+    return http.put(`/principal/${id}`, data);
   }
 }
 
-export default new TutorialDataService();
+export default new PrincipalDataService();
